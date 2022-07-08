@@ -1,4 +1,3 @@
-
 //create tags
 const form = document.querySelector("#new-item-form")
 const list = document.querySelector("#list")
@@ -9,10 +8,10 @@ form.addEventListener("submit", val => {
   val.preventDefault()
 
   //create update sequence
-  const item = document.createElement('ul')
-  const li = document.createElement('li')
+  const item = document.createElement("ul")
+  const li = document.createElement("li")
   li.innerText = input.value
-  item.classList.add('list-item')
+  item.classList.add("list-item")
   //add item
   item.appendChild(li)
   list.appendChild(item)
@@ -20,7 +19,7 @@ form.addEventListener("submit", val => {
   //clear input
   input.value = ""
 
-  li.addEventListener('click', () => {
-          list.removeChild(item)
+  li.addEventListener("click", () => {
+    list.removeChild(item)
   })
 })
